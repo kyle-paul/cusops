@@ -1,0 +1,6 @@
+cuda_layers.cu
+setup.py
+cuda_layers.egg-info/PKG-INFO
+cuda_layers.egg-info/SOURCES.txt
+cuda_layers.egg-info/dependency_links.txt
+cuda_layers.egg-info/top_level.txt
