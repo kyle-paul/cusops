@@ -3,12 +3,8 @@
 ## Introduction
 In this repository, I attempt to reimplement popular operations such as convolution, linear layer, etc from scratch with CUDA programming (for GPU) and C++ (for CPU) to enhance my deep knowledge about Deep Learning. Then, I'll try to modify these operations and implement novel custom operations aiming at reducing inference time and increasing efficiency:
 
-### Convolution 2D
-$$
-\text{out}(N_i, C_{\text{out}_j}) = \text{bias}(C_{\text{out}_j}) +
-\sum_{k = 0}^{C_{\text{in}} - 1} \text{weight}(C_{\text{out}_j}, k) \star \text{input}(N_i, k)
-$$
-
+### Math for implementation
+There is math proof behind each of my implementation. You can first read the `c++` implementation version and try to find out the math proof before jumping into `cuda` implemenation version since you have to think "parallelly" and "spatially" to implement in CUDA languages. The documentation of nvidia cuda programming can be found [here](https://docs.nvidia.com/cuda/cuda-c-programming-guide/). Next, I will explore some backends such as `Cudnn`, `Cublas` to optimize my code. 
 
 ## Setup environment
 In order to run the build the package `cuda_layers` or `cpp_layers` code in `setup.py` file, you need to use Docker or your own environment. For those want to use docker:
