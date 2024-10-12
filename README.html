@@ -1224,14 +1224,10 @@ body {
 <div class="markdown-heading"><h2 class="heading-element">Introduction</h2><a id="user-content-introduction" class="anchor" aria-label="Permalink: Introduction" href="#introduction"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
 <p>In this repository, I attempt to reimplement popular operations such as convolution, linear layer, etc from scratch with CUDA programming (for GPU) and C++ (for CPU) to enhance my deep knowledge about Deep Learning. Then, I'll try to modify these operations and implement novel custom operations aiming at reducing inference time and increasing efficiency:</p>
 <div class="markdown-heading"><h3 class="heading-element">Convolution 2D</h3><a id="user-content-convolution-2d" class="anchor" aria-label="Permalink: Convolution 2D" href="#convolution-2d"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
-<pre><code>\begin{gather}
-\text{out}(N_i, C_{\text{out}_j}) = \text{bias}(C_{\text{out}_j}) +
-\sum_{k = 0}^{C_{\text{in}} - 1} \text{weight}(C_{\text{out}_j}, k) \star \text{input}(N_i, k)
-\end{gather}
-</code></pre>
-<p>the output value of the layer with input size
-:math:<code>(N, C_{\text{in}}, H, W)</code> and output :math:<code>(N, C_{\text{out}}, H_{\text{out}}, W_{\text{out}})</code>
-can be precisely described as:</p>
+<p>$$
+\text{out}(N_i, C_{\text{out}<em>j}) = \text{bias}(C</em>{\text{out}<em>j}) +
+\sum</em>{k = 0}^{C_{\text{in}} - 1} \text{weight}(C_{\text{out}_j}, k) \star \text{input}(N_i, k)
+$$</p>
 <div class="markdown-heading"><h2 class="heading-element">Setup environment</h2><a id="user-content-setup-environment" class="anchor" aria-label="Permalink: Setup environment" href="#setup-environment"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
 <p>In order to run the build the package <code>cuda_layers</code> or <code>cpp_layers</code> code in <code>setup.py</code> file, you need to use Docker or your own environment. For those want to use docker:</p>
 <div class="highlight highlight-source-shell"><pre>docker pull kylepaul/deeplearning:deployment</pre></div>
