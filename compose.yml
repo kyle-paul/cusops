@@ -10,7 +10,7 @@ services:
               count: all
               capabilities: [gpu]
     volumes:
-      - ~/ssd/custom-operations:/workspace
+      - /home/pc/dev/cusops:/workspace
     ipc: host
     ulimits:
       memlock: -1
